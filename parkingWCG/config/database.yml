@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: parkingWCG_development
+
+test:
+  <<: *default
+  database: parkingWCG_test
+
+production:
+  <<: *default
+  database: parkingWCG_production
+  username: parkingWCG
+  password: <%= ENV['PARKINGWCG_DATABASE_PASSWORD'] %>
