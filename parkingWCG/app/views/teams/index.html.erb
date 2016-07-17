@@ -1,11 +1,12 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice">< %= notice %></p>-->
 
 <h1>Listando Equipo</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Equipo</th>
+      <th>Nombre</th>
+      <th>Acción</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @teams.each do |team| %>
       <tr>
         <td><%= team.name %></td>
+        <td><%= team.job %></td>
         <td><%= link_to 'Ver', team %></td>
         <td><%= link_to 'Editar', edit_team_path(team) %></td>
         <td><%= link_to 'Eliminar', team, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>

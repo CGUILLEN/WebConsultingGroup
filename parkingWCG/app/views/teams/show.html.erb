@@ -1,8 +1,12 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice">< %= notice %></p>-->
 
 <p>
   <strong>Nombre:</strong>
   <%= @team.name %>
+</p>
+<p>
+  <strong>Acción:</strong>
+  <%= @team.job %>
 </p>
 
 <%= link_to 'Editar', edit_team_path(@team) %> |
